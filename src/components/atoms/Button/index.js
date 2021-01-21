@@ -16,9 +16,10 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   }),
   text: (type) => ({
-    fontSize: 16,
-    fontWeight: '600',
-    textAlign: 'center',
     color: type == 'secondary' ? '#112340' : 'white',
+    fontFamily: 'Nunito-SemiBold',
+    fontSize: 18,
+    // fontWeight: '600',
+    textAlign: 'center',
   }),
 });
