@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
+
 import { colors } from '../../../utils';
 
 export default function Input({ label }) {
