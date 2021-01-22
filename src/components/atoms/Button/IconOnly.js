@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-
+import { TouchableOpacity } from 'react-native';
 import { IconBackDark } from '../../../assets';
 
 export default function IconOnly({ onPress, icon }) {
@@ -20,5 +19,3 @@ export default function IconOnly({ onPress, icon }) {
     </TouchableOpacity>
   );
 }
-
-const styles = StyleSheet.create({});
