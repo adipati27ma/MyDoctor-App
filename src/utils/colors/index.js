@@ -3,6 +3,7 @@ const mainColor = {
   dark1: '#112340',
   grey1: '#7D8797',
   grey2: '#E9E9E9',
+  grey3: '#495A75',
   white: 'white',
   black: 'black',
 };
@@ -15,6 +16,8 @@ export const colors = {
   text: {
     primary: mainColor.dark1,
     secondary: mainColor.grey1,
+    menuActive: mainColor.green1,
+    menuInactive: mainColor.grey3,
   },
   button: {
     primary: {

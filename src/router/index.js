@@ -12,23 +12,24 @@ import {
   Messages,
   Hospitals,
 } from '../pages';
+import { BottomNavigator } from '../components';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const MainApp = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator tabBar={(props) => <BottomNavigator {...props} />}>
       <Tab.Screen name="Doctor" component={Doctor} />
       <Tab.Screen name="Messages" component={Messages} />
-      <Tab.Screen name="Hospital" component={Hospitals} />
+      <Tab.Screen name="Hospitals" component={Hospitals} />
     </Tab.Navigator>
   );
 };
 
 const Router = () => {
   return (
-    <Stack.Navigator initialRouteName="Splash">
+    <Stack.Navigator initialRouteName="GetStarted">
       <Stack.Screen
         name="Splash"
         component={Splash}
