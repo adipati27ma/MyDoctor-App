@@ -1,16 +1,18 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 
+import { IconNext } from '../../../assets';
 import { colors, fonts } from '../../../utils';
 
-export default function ListMessages({ profilePic, name, lastMessage }) {
+export default function ListDoctor({ profilePic, name, desc, nextIcon }) {
   return (
     <View style={styles.container}>
       <Image source={profilePic} style={styles.avatar} />
       <View style={styles.textWrapper}>
         <Text style={styles.name}>{name}</Text>
-        <Text style={styles.lastMessage}>{lastMessage}</Text>
+        <Text style={styles.desc}>{desc}</Text>
       </View>
+      {nextIcon && <IconNext />}
     </View>
   );
 }
@@ -21,6 +23,7 @@ const styles = StyleSheet.create({
     padding: 16,
     borderBottomWidth: 1,
     borderBottomColor: colors.border,
+    justifyContent: 'space-between',
   },
   avatar: {
     width: 46,
@@ -30,13 +33,14 @@ const styles = StyleSheet.create({
   },
   textWrapper: {
     justifyContent: 'center',
+    flex: 1,
   },
   name: {
     fontSize: 16,
     fontFamily: fonts.primary.normal,
     color: colors.text.primary,
   },
-  lastMessage: {
+  desc: {
     fontSize: 12,
     fontFamily: fonts.primary[300],
     color: colors.text.secondary,

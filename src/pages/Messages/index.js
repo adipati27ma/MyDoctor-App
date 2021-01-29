@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { DummyDoc1, DummyDoc2, DummyDoc3 } from '../../assets';
-import { ListMessages } from '../../components';
+import { ListDoctor } from '../../components';
 import { colors, fonts } from '../../utils';
 
 export default function Messages() {
@@ -11,19 +11,19 @@ export default function Messages() {
       id: 1,
       profilePic: DummyDoc1,
       name: 'Alexander Jannie',
-      lastMessage: 'Baik bu, terima kasih banyak atas wakt...',
+      desc: 'Baik bu, terima kasih banyak atas wakt...',
     },
     {
       id: 2,
       profilePic: DummyDoc3,
       name: 'Nairobi Putri Hayza',
-      lastMessage: 'Oh tentu saja tidak karena jeruk it...',
+      desc: 'Oh tentu saja tidak karena jeruk it...',
     },
     {
       id: 3,
       profilePic: DummyDoc2,
       name: 'John McParker Steve',
-      lastMessage: 'Oke menurut pak dokter bagaimana unt...',
+      desc: 'Oke menurut pak dokter bagaimana unt...',
     },
   ]);
 
@@ -32,11 +32,11 @@ export default function Messages() {
       <View style={styles.content}>
         <Text style={styles.title}>Messages</Text>
         {doctors.map((doctor) => (
-          <ListMessages
+          <ListDoctor
             key={doctor.id}
             profilePic={doctor.profilePic}
             name={doctor.name}
-            lastMessage={doctor.lastMessage}
+            desc={doctor.desc}
           />
         ))}
       </View>
