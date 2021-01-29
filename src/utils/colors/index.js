@@ -1,5 +1,6 @@
 const mainColor = {
   green1: '#0BCAD4',
+  green2: '#EDFCFD',
   dark1: '#112340',
   grey1: '#7D8797',
   grey2: '#E9E9E9',
@@ -30,4 +31,5 @@ export const colors = {
     },
   },
   border: mainColor.grey2,
+  cardLight: mainColor.green2,
 };
