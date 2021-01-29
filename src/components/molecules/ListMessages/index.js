@@ -1,18 +1,15 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 
-import { DummyTopRatedDoc1 } from '../../../assets';
 import { colors, fonts } from '../../../utils';
 
-export default function ListMessages() {
+export default function ListMessages({ profilePic, name, lastMessage }) {
   return (
     <View style={styles.container}>
-      <Image source={DummyTopRatedDoc1} style={styles.avatar} />
+      <Image source={profilePic} style={styles.avatar} />
       <View style={styles.textWrapper}>
-        <Text style={styles.name}>Alexander Jannie</Text>
-        <Text style={styles.desc}>
-          Baik ibu, terima kasih banyak atas wakt...
-        </Text>
+        <Text style={styles.name}>{name}</Text>
+        <Text style={styles.lastMessage}>{lastMessage}</Text>
       </View>
     </View>
   );
@@ -39,7 +36,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.primary.normal,
     color: colors.text.primary,
   },
-  desc: {
+  lastMessage: {
     fontSize: 12,
     fontFamily: fonts.primary[300],
     color: colors.text.secondary,
