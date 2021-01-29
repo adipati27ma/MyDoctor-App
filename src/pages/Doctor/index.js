@@ -9,6 +9,7 @@ import {
   Gap,
 } from '../../components';
 import { colors, fonts } from '../../utils';
+import { JSONDoctorCategories } from '../../assets';
 
 export default function Doctor() {
   return (
@@ -26,10 +27,11 @@ export default function Doctor() {
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <View style={styles.category}>
                 <Gap width={16} />
-                <DoctorCategory />
-                <DoctorCategory />
-                <DoctorCategory />
-                <DoctorCategory />
+                {JSONDoctorCategories.data.map((item) => {
+                  return (
+                    <DoctorCategory key={item.id} category={item.category} />
+                  );
+                })}
                 <Gap width={6} />
               </View>
             </ScrollView>
