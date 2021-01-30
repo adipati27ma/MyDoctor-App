@@ -1,19 +1,25 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import { IconNext } from '../../../assets';
 import { colors, fonts } from '../../../utils';
 
-export default function ListDoctor({ profilePic, name, desc, nextIcon }) {
+export default function ListDoctor({
+  profilePic,
+  name,
+  desc,
+  nextIcon,
+  onPress,
+}) {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity onPress={onPress} style={styles.container}>
       <Image source={profilePic} style={styles.avatar} />
       <View style={styles.textWrapper}>
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.desc}>{desc}</Text>
       </View>
       {nextIcon && <IconNext />}
-    </View>
+    </TouchableOpacity>
   );
 }
 

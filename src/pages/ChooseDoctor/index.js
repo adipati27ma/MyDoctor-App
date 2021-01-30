@@ -18,6 +18,7 @@ export default function ChooseDoctor({ navigation }) {
         name="Alexander Jannie"
         desc="Wanita"
         nextIcon
+        onPress={() => navigation.navigate('Chatting')}
       />
       <ListDoctor
         profilePic={DummyDoc1}
