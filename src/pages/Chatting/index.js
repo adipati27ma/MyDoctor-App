@@ -12,10 +12,12 @@ export default function Chatting({ navigation }) {
         type="dark-profile"
         onPress={() => navigation.goBack()}
       />
-      <Text style={styles.chatDate}>Senin, 21 Maret, 2020</Text>
-      <ChatItem />
-      <ChatItem />
-      <ChatItem />
+      <View style={styles.content}>
+        <Text style={styles.chatDate}>Senin, 21 Maret, 2020</Text>
+        <ChatItem />
+        <ChatItem />
+        <ChatItem />
+      </View>
       <ChatInput />
     </View>
   );
@@ -24,6 +26,9 @@ export default function Chatting({ navigation }) {
 const styles = StyleSheet.create({
   page: {
     backgroundColor: colors.white,
+    flex: 1,
+  },
+  content: {
     flex: 1,
   },
   chatDate: {
