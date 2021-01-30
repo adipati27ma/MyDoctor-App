@@ -4,10 +4,14 @@ import { StyleSheet, Text, View } from 'react-native';
 import { ChatInput, ChatItem, Header } from '../../components';
 import { colors, fonts } from '../../utils';
 
-export default function Chatting() {
+export default function Chatting({ navigation }) {
   return (
     <View style={styles.page}>
-      <Header title="Nairobi Putri Hayza" type="dark-profile" />
+      <Header
+        title="Nairobi Putri Hayza"
+        type="dark-profile"
+        onPress={() => navigation.goBack()}
+      />
       <Text style={styles.chatDate}>Senin, 21 Maret, 2020</Text>
       <ChatItem />
       <ChatItem />

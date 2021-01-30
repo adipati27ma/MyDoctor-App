@@ -5,10 +5,10 @@ import { DummyDoc3 } from '../../../assets';
 import { colors, fonts } from '../../../utils';
 import { Button } from '../../atoms';
 
-export default function DarkProfile() {
+export default function DarkProfile({ onPress }) {
   return (
     <View style={styles.container}>
-      <Button type="icon-only" icon="back-light" />
+      <Button type="icon-only" icon="back-light" onPress={onPress} />
       <View style={styles.textWrapper}>
         <Text style={styles.name}>Nairobi Putri Hayza</Text>
         <Text style={styles.desc}>Dokter Anak</Text>

@@ -7,7 +7,7 @@ import DarkProfile from './DarkProfile';
 
 export default function Header({ onPress, title, type }) {
   if (type === 'dark-profile') {
-    return <DarkProfile />;
+    return <DarkProfile onPress={onPress} />;
   }
 
   return (
