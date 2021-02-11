@@ -1,19 +1,33 @@
 import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-import { IconNext } from '../../../assets';
+import {
+  IconNext,
+  IconEditProfile,
+  IconLanguage,
+  IconRate,
+  IconHelp,
+} from '../../../assets';
 import { colors, fonts } from '../../../utils';
 
-export default function ListDoctor({
+export default function List({
   profilePic,
   name,
   desc,
   nextIcon,
   onPress,
+  icon,
 }) {
+  const Icon = () => {
+    if (icon === 'edit-profile') return <IconEditProfile />;
+    if (icon === 'language') return <IconLanguage />;
+    if (icon === 'rate') return <IconRate />;
+    if (icon === 'help') return <IconHelp />;
+  };
+
   return (
     <TouchableOpacity onPress={onPress} style={styles.container}>
-      <Image source={profilePic} style={styles.avatar} />
+      {icon ? <Icon /> : <Image source={profilePic} style={styles.avatar} />}
       <View style={styles.textWrapper}>
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.desc}>{desc}</Text>
@@ -30,16 +44,16 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: colors.border,
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
   avatar: {
     width: 46,
     height: 46,
     borderRadius: 46 / 2,
-    marginRight: 12,
   },
   textWrapper: {
-    justifyContent: 'center',
     flex: 1,
+    marginLeft: 16,
   },
   name: {
     fontSize: 16,
