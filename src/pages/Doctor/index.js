@@ -9,7 +9,12 @@ import {
   Gap,
 } from '../../components';
 import { colors, fonts } from '../../utils';
-import { JSONDoctorCategories } from '../../assets';
+import {
+  DummyTopRatedDoc1,
+  DummyTopRatedDoc2,
+  DummyTopRatedDoc3,
+  JSONDoctorCategories,
+} from '../../assets';
 
 export default function Doctor({ navigation }) {
   return (
@@ -42,9 +47,24 @@ export default function Doctor({ navigation }) {
           </View>
           <View style={styles.wrapperSection}>
             <Text style={styles.sectionLabel}>Top Rated Doctors</Text>
-            <RatedDoctor />
-            <RatedDoctor />
-            <RatedDoctor />
+            <RatedDoctor
+              name="Alexa Rachel"
+              desc="Pediatrician"
+              avatar={DummyTopRatedDoc1}
+              onPress={() => navigation.navigate('DoctorProfile')}
+            />
+            <RatedDoctor
+              name="Sunny Frank"
+              desc="Dentist"
+              avatar={DummyTopRatedDoc2}
+              onPress={() => navigation.navigate('DoctorProfile')}
+            />
+            <RatedDoctor
+              name="Poe Minn"
+              desc="Podiatrist"
+              avatar={DummyTopRatedDoc3}
+              onPress={() => navigation.navigate('DoctorProfile')}
+            />
             <Text style={styles.sectionLabel}>Good News</Text>
           </View>
           <NewsItem />

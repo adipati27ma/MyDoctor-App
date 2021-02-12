@@ -9,7 +9,7 @@ export default function UpdateProfile({ navigation }) {
     <View style={styles.page}>
       <Header title="Edit Profile" onPress={() => navigation.goBack()} />
       <ScrollView showsVerticalScrollIndicator={false}>
-        <Profile />
+        <Profile isIcon />
         <View style={styles.content}>
           <Gap height={26} />
           <Input label="Full Name" />
@@ -20,7 +20,10 @@ export default function UpdateProfile({ navigation }) {
           <Gap height={24} />
           <Input label="Password" />
           <Gap height={40} />
-          <Button title="Save Profile" />
+          <Button
+            title="Save Profile"
+            onPress={() => navigation.goBack('UserProfile')}
+          />
           <Gap height={48} />
         </View>
       </ScrollView>

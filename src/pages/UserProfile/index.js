@@ -9,7 +9,7 @@ export default function UserProfile({ navigation }) {
     <View style={styles.page}>
       <Header title="Profile" onPress={() => navigation.goBack()} />
       <Gap height={10} />
-      <Profile />
+      <Profile name="Shayna Melinda" desc="Product Designer" />
       <Gap height={14} />
       <List
         name="Edit Profile"
@@ -19,20 +19,20 @@ export default function UserProfile({ navigation }) {
         onPress={() => navigation.navigate('UpdateProfile')}
       />
       <List
-        name="Edit Profile"
-        desc="Last Update Yesterday"
+        name="Language"
+        desc="Available 12 languages"
         nextIcon
         icon="language"
       />
       <List
-        name="Edit Profile"
-        desc="Last Update Yesterday"
+        name="Give Us Rate"
+        desc="On Google Play Store"
         nextIcon
         icon="rate"
       />
       <List
-        name="Edit Profile"
-        desc="Last Update Yesterday"
+        name="Help Center"
+        desc="Read our guidelines"
         nextIcon
         icon="help"
       />
