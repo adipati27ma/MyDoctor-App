@@ -4,10 +4,10 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Button, Gap, Header, Input, Profile } from '../../components';
 import { colors } from '../../utils';
 
-export default function UpdateProfile() {
+export default function UpdateProfile({ navigation }) {
   return (
     <View style={styles.page}>
-      <Header title="Edit Profile" />
+      <Header title="Edit Profile" onPress={() => navigation.goBack()} />
       <ScrollView showsVerticalScrollIndicator={false}>
         <Profile />
         <View style={styles.content}>
