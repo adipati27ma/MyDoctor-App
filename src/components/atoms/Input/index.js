@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 import { colors, fonts } from '../../../utils';
 
-export default function Input({ label }) {
+export default function Input({ label, value, onChangeText, ...props }) {
   const [border, setBorder] = useState(colors.border);
 
   const onFocusForm = () => {
@@ -19,6 +19,10 @@ export default function Input({ label }) {
         onFocus={onFocusForm}
         onBlur={onBlurForm}
         style={styles.input(border)}
+        value={value}
+        onChangeText={onChangeText}
+        returnKeyType="next"
+        {...props}
       />
     </View>
   );

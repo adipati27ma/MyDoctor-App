@@ -12,7 +12,7 @@ export default function UpdateProfile({ navigation }) {
         <Profile isIcon />
         <View style={styles.content}>
           <Gap height={26} />
-          <Input label="Full Name" />
+          <Input label="Nama Lengkap" />
           <Gap height={24} />
           <Input label="Pekerjaan" />
           <Gap height={24} />
